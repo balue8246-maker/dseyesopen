@@ -1,0 +1,24 @@
+{
+  "name": "dseyesopen",
+  "version": "2.0.0",
+  "description": "dseyesopen：让无识图能力的 DeepSeek 仿佛睁开了眼睛。发图自动交免费视觉小模型识别，后台注入文字描述，对话框无感。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

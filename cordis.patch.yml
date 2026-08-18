@@ -1,0 +1,6 @@
+# dseyesopen — bundle patch layer.
+# 安装进 profile 后（dsh plugin --profile web add file:<本目录>），
+# 该行把包主入口挂载为 Host 插件（纯 Cordis 插件，零外部依赖）。
+- insert:
+    - id: dseyesopen
+      name: dseyesopen
