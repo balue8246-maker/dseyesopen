@@ -1,0 +1,6 @@
+url: https://github.com/balue8246-maker/dseyesopen
+name: balue8246-maker/dseyesopen
+category: vision
+description:
+  en: 'Vision bridge for text-only DeepSeek: images are described by a tiny vision model (glm-4.6v-flashx) behind the scenes, so the chat can send pictures without switching models.'
+  zh: '视觉桥：让纯文本 DeepSeek 也能收图——小识图模型（glm-4.6v-flashx）后台转述成文字，对话框里图还在，模型只见描述。'
