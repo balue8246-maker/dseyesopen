@@ -25,16 +25,14 @@ dsh plugin --profile web add file:/path/to/dseyesopen
 
 `glm-4.6v-flashx` 是极低价付费档，账号里充几块钱就够用很久（如遇高峰限流，免费档 glm-4.6v-flash 可作备选）。密钥也可以放进环境变量 `ZHIPU_API_KEY`。
 
-## 可选：粘贴截图走原生附件
+## 粘贴截图：Cmd+V 直接成图
 
-在 `~/.dsh/profiles/web/cordis.patch.yml` 里关闭 modlens 的粘贴接管，让 Cmd+V 成为真图片附件：
-
-```yaml
-- id: modlens
-  name: '@liustack/modlens'
-  config:
-    pasteToPath: false
-```
+dsh 原生 composer 本身支持图片粘贴成**真附件**（无需 modlens / 无需 patch 配置）。
+与 **dsDragPasteALL** 同时安装时，需使用其 **1.0.1+** 版本：
+1.0.0 会在 document 捕获阶段劫持所有"带文件"的粘贴（包括截图），
+导致 Cmd+V 只插入路径文本、不再成为图片附件。
+1.0.1 起纯图片粘贴（截图/复制的图片）一律放行给 dsh 原生流程成图，
+本插件据此自动识别；只有非图片文件粘贴才走 dragpasteall 路径反查。
 
 ## 工作原理
 
